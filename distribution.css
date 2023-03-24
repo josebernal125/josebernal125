@@ -1,34 +1,41 @@
-/* Estilo base para todos los dispositivos */
-body {
-    font-size: 16px;
-    max-width: 800px;
-    margin: 0 auto;
+#graficos-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
   }
   
-  /* Estilos para dispositivos móviles */
+  #graficos-container > div {
+    margin: 10px;
+  }
+  
+  #graficos-container > div[class*="x"] {
+    flex-basis: calc(33.33% - 20px);
+    position: relative;
+    padding-bottom: calc(80% / 4);
+    height: 0;
+  }
+  
+  #graficos-container > div#gauge {
+    flex-basis: calc(66.66% - 20px);
+    position: relative;
+    padding-bottom: calc(80% / 2);
+    height: 0;
+  }
+  
+  @media screen and (max-width: 768px) {
+    #graficos-container > div[class*="x"] {
+      flex-basis: calc(50% - 20px);
+    }
+  }
+  
   @media screen and (max-width: 480px) {
-    body {
-      font-size: 14px;
-      max-width: 100%;
-      padding: 10px;
+    #graficos-container {
+      flex-direction: column;
     }
-  }
   
-  /* Estilos para tabletas */
-  @media screen and (min-width: 481px) and (max-width: 768px) {
-    body {
-      font-size: 16px;
-      max-width: 100%;
-      padding: 20px;
-    }
-  }
-  
-  /* Estilos para computadoras de escritorio */
-  @media screen and (min-width: 769px) {
-    body {
-      font-size: 18px;
-      max-width: 1200px;
-      padding: 50px;
+    #graficos-container > div[class*="x"] {
+      flex-basis: calc(100% - 20px);
     }
   }
   
