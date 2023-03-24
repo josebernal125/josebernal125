@@ -13,7 +13,7 @@ function callback(data, status){
 	else {
 		alert("There was a problem");
 	}
-}
+}/*
 function callback2(data, status){
 	if (status == "success") {
 		temp = parseFloat(data.result);
@@ -36,16 +36,16 @@ function callback3(data, status){
 	else {
 		alert("There was a problem");
 	}
-}
+}*/
 
 function getReading(){
    	$.get(url, {access_token: accessToken}, callback);
 }
-
+/*
 function getReading2(){
 	$.get(url2, {access_token: accessToken}, callback2);
 }
 
 function getReading3(){
 	$.get(url3, {access_token: accessToken}, callback3)
-}
+}*/

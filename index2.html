@@ -19,9 +19,19 @@
 	display: flex;
         justify-content: center;
         align-items: center;
-	
-		<div id="gauge" class="200x160px" style="height: 400; width: 320;"></div>
-			
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4">
+				<div id="gauge" class="embed-responsive embed-responsive-4by3"></div>
+			</div>
+			<div class="col-md-4">
+				<div id="g3" class="embed-responsive embed-responsive-4by3"></div>
+			</div>
+			<div class="col-md-4">
+				<div id="g2" class="embed-responsive embed-responsive-4by3"></div>
+			</div>
+		</div>
+	</div>
 
 
 	<script>
@@ -33,6 +43,24 @@
 			title: "Temperatura (C)"
 		});
 		getReading();
+
+		var g3 = new JustGage({
+			id: "g3",
+			value: 0,
+			min: 0,
+			max: 100,
+			title: "Temperatura (F)"
+		});
+		getReading3();
+
+		var g2 = new JustGage({
+			id: "g2",
+			value: 0,
+			min: 0,
+			max: 100,
+			title: "Humedad (%)"
+		});
+		getReading2();
 
 	</script>
 
