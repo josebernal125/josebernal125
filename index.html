@@ -5,34 +5,45 @@
 	<script src="raphael-2.1.4.min.js"></script>
 	<script src="justgage.js"></script>
 	<script src="particle.js"></script>
-	<!--<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css"
 		integrity="sha512-v48D4wyF3hJ4Ro8c47WYXY0Ji5nXx5f5G8WQRpRXDv4//e3AzebLc+fW2RK5nYztf9Q22hroFz8tAAf+EmvCZg=="
 		crossorigin="anonymous" referrerpolicy="no-referrer" />
-	-->
+	
 
 
 </head>
 
 <body>
 	
-	
-	<div id="gauge" class="200x160px"></div>
-			
-
-
 	<script>
-		var g = new JustGage({
-			id: "gauge",
-			value: 0,
-			min: 0,
-			max: 100,
-			title: "Temperatura (C)"
-		});
-		getReading();
-
+		
+        function led(parametro){
+            var retroalimentacion;
+            var pic;
+            if(parametro == 0){
+                getReadingOff();
+                pic = "focoTurnOff.png"
+            }
+            else if(parametro == 1){
+                getReadingOn();
+                pic = "focoTurnOn.png"
+            }
+            
+            document.getElementById("myImage").src = pic;
+        }
 	</script>
+    
+    <img id="myImage" src="focoTurnOff.png" width="100" height="180">
+
+    <button type="button"
+    onclick="led(1)", >Turn On</button>
+
+    <button type="button"
+    onclick="led(0)">Turn Off</button>
+
+    <div id="Text"></div>
 
 </body>
 
