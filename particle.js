@@ -7,10 +7,12 @@ function switchOn()
 {
 	$.post(url, {params: "on", access_token: accessToken });
 	pic = "focoTurnOn.png"
+	document.getElementById("myImage").src = pic;
 }  
 
 function switchOff()
 {
 	$.post(url, {params: "off", access_token: accessToken });
 	pic = "focoTurnOff.png"
+	document.getElementById("myImage").src = pic;
 }  
