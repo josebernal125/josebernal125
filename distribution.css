@@ -1,41 +1,5 @@
-#graficos-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  #graficos-container > div {
-    margin: 10px;
-  }
-  
-  #graficos-container > div[class*="x"] {
-    flex-basis: calc(33.33% - 20px);
-    position: relative;
-    padding-bottom: calc(80% / 4);
-    height: 0;
-  }
-  
-  #graficos-container > div#gauge {
-    flex-basis: calc(66.66% - 20px);
-    position: relative;
-    padding-bottom: calc(80% / 2);
-    height: 0;
-  }
-  
-  @media screen and (max-width: 768px) {
-    #graficos-container > div[class*="x"] {
-      flex-basis: calc(50% - 20px);
-    }
-  }
-  
-  @media screen and (max-width: 480px) {
-    #graficos-container {
-      flex-direction: column;
-    }
-  
-    #graficos-container > div[class*="x"] {
-      flex-basis: calc(100% - 20px);
-    }
-  }
-  
+#status {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
