@@ -1,0 +1,33 @@
+body {
+	background-image: url('C:/Users/joseb/Documents/Github_web/josebernal125.github.io/fondo.jpg');
+	background-size: cover;
+	background-position: center;
+}
+
+input[type="button"] {
+	background-color: #1E90FF;
+	color: #fff;
+  font-size: 50;
+	border: none;
+	padding: 15px 70px;
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+#status {
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 10px;
+  color: #000;
+  font-size: larger;
+	background-color: none;
+}
+
+#graficos-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
