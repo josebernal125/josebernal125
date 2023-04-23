@@ -13,15 +13,14 @@ function switchIMG(data) {
     var rv = data.return_value;
     $("#return_value").text(rv);
     if(rv == 1){
-        
 		$("#status").text("Peces Alimentados").css("display", "block");
         setTimeout(desaparecer, 3000);
     }
     else {
-        
-		$("#status").text("Disconnected");
+        $("#status").text("Disconnected");
     }
 }
+
 function desaparecer(){
     $("#status").css("display", "none"); // ocultar la etiqueta después de 3 segundos
 }
