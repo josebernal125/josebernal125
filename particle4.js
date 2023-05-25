@@ -1,6 +1,6 @@
 var accessToken = "ef863e1c826c1e21e18eb4b443721f0b01f6e894";
 var deviceID = "220021001947393035313138"
-var url = "https://api.particle.io/v1/devices/" + deviceID + "/servo";
+var url = "https://api.particle.io/v1/devices/" + deviceID + "/dispensador";
 
 
 function switchOn()
@@ -13,7 +13,7 @@ function switchIMG(data) {
     var rv = data.return_value;
     $("#return_value").text(rv);
     if(rv == 1){
-		$("#status").text("Peces Alimentados").css("display", "block");
+		$("#status").text("Bebida preparada").css("display", "block");
         setTimeout(desaparecer, 3000);
     }
     else {
